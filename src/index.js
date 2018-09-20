@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './panel.scss';
+import './popupPanel.scss';
 
 export default class PopupPanelComponent extends React.Component {
   constructor(props) {
