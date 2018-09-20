@@ -1,6 +1,6 @@
 {
   "name": "react-cloud-popup-panel-mobile",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "progress bar for react",
   "main": "lib/index.js",
   "scripts": {
