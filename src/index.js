@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './popupPanel.scss';
+import './index.scss';
 
 export default class PopupPanelComponent extends React.Component {
   constructor(props) {
@@ -9,13 +9,13 @@ export default class PopupPanelComponent extends React.Component {
   }
 
   componentDidMount() {
-    document.getElementsByClassName('panel-body')[0].addEventListener("touchmove", (e) => {
+    document.getElementsByClassName('cloud-popup-panel-body')[0].addEventListener("touchmove", (e) => {
       if (this.props.open) {
         e.stopPropagation();
       }
     }, { passive: false });
 
-    document.getElementsByClassName('panel-glass')[0].addEventListener("touchmove", (e) => {
+    document.getElementsByClassName('cloud-popup-panel-glass')[0].addEventListener("touchmove", (e) => {
       if (this.props.open) {
         e.preventDefault();
         e.stopPropagation();
@@ -29,17 +29,17 @@ export default class PopupPanelComponent extends React.Component {
 
   render() {
     return (
-      <div id="panel" className={'panel-container' + (this.props.open ? ' popup' : '')}>
-        <div className="panel-glass" />
-        <div className="panel-header">
+      <div className={'cloud-popup-panel-container' + (this.props.open ? ' popup' : '')}>
+        <div className="cloud-popup-panel-glass" />
+        <div className="cloud-popup-panel-header">
           {this.props.title}
           <span className="close-btn" onClick={this.handleCloseClick.bind(this)}>&times;</span>
         </div>
-        <div className={'panel-body ' + (this.props.hasButton ? 'with-footer' : 'without-footer')}>
+        <div className={'cloud-popup-panel-body ' + (this.props.hasButton ? 'with-footer' : 'without-footer')}>
           {this.props.children.props.children[0]}
         </div>
         {
-          this.props.hasButton ? <div className="panel-footer">{this.props.children.props.children[1]}</div> : ''
+          this.props.hasButton ? <div className="cloud-popup-panel-footer">{this.props.children.props.children[1]}</div> : ''
         }
       </div>
     );

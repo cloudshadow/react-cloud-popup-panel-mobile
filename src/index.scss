@@ -5,16 +5,16 @@ $panelFooterHight: 7vh;
 $panelBodyWithFooterHight: $panelHight - $panelGlass - $panelHeaderHight - $panelFooterHight;
 $panelBodyWithoutFooterHight: $panelHight - $panelGlass - $panelHeaderHight;
 
-.panel-container {
+.cloud-popup-panel-container {
   width: 100vw;
   height: $panelHight;
   position: fixed;
   z-index: 8000;
   bottom: -$panelHight;
-  .panel-glass {
+  .cloud-popup-panel-glass {
     height: $panelGlass;
   }
-  .panel-header {
+  .cloud-popup-panel-header {
     height: $panelHeaderHight;
     background-color: #ddd;
     text-align: center;
@@ -28,7 +28,7 @@ $panelBodyWithoutFooterHight: $panelHight - $panelGlass - $panelHeaderHight;
     }
   }
 
-  .panel-body {
+  .cloud-popup-panel-body {
     background-color: #fff;
     overflow-y: scroll;
     margin-right: -20px;
@@ -42,7 +42,7 @@ $panelBodyWithoutFooterHight: $panelHight - $panelGlass - $panelHeaderHight;
     height: $panelBodyWithoutFooterHight;
   }
 
-  .panel-footer {
+  .cloud-popup-panel-footer {
     height: $panelFooterHight;
     background-color: #fff;
     button {
